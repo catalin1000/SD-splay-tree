@@ -54,7 +54,7 @@ node* splay(node* root, int key)
 
     if (root->key > key) /// se duce in stanga
     {
-        if (root->left == NULL) ///  e liber copilul , facem doar o rotatie ca sa ajunga noul copil parinte
+        if (root->left == NULL) ///  e liber copilul , facem doar o rotatie ca sa ajunga noul copil parinte, in functia insert ( in continuarea acesteia ) 
             return root;
         if (root->left->key>key) /// mergem inca un copil mai jos si apelam recursiv de la nepot , facand o zig-zig rotation
         {
@@ -75,7 +75,7 @@ node* splay(node* root, int key)
     }
     else /// se duce in dreapta
     {
-        if (root->right == NULL) /// e liber copilul , facem doar o rotatie ca sa ajunga noul copil parinte
+        if (root->right == NULL) /// e liber copilul , facem doar o rotatie ca sa ajunga noul copil parinte, in functia insert ( in continuarea acesteia )
             return root;
         if (root->right->key > key) /// mergem inca un copil mai jos si apelam recursiv de la nepot , facand o zag-zig rotation
         {
